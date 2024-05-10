@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 43% 42% 15%;
+    font-family: "Rubik", sans-serif;
+}
+
+span {
+    color: #FC4F00;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font-family: "Rubik", sans-serif;
+    border: none;
+    font-size: 1.2rem;
+}
+
+/* HEADER */
+#check {
+    display: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* height: 43vh; */
+    background: url("./images/coffee-header2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    padding-left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(50px); */
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+    & .navbar {
+        padding-left: 2rem;
+        width: 100%;
+        transition-duration: 1s;
+
+        & a{
+            color: #F9E0BB;
+            font-weight: 600;
+            font-size: 1.3rem;
+            padding: 6px 18px;
+            border-radius: 0.5rem;
+            margin: 0 1%;
+            transition-duration: 0.7s;
+
+            &:hover {
+                    background-color: #FC4F00;
+                    color: #5B0909;
+            }
+        }
+     
+    }
+
+    & .nav-icons {
+        /* position: absolute; */
+        font-size: 2rem;
+        color: #F9E0BB;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.header-body {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+
+    & .header-text {
+
+        /* GRID */
+        /* width: 50%;
+        color: #F9E0BB;
+        display: grid;
+        grid-template-rows: 1fr 0.5fr 0.5fr;
+
+        & h1 {
+            align-self: end;
+            justify-self: center;
+        }
+
+        & h3 {
+            width: 40%;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+        }
+
+        & div {
+            align-self: start;
+            justify-self: center;
+            
+            & .button {
+                margin: 0 0.5rem;
+            }
+        } */
+
+        /* FLEXBOX */
+        width: 50%;
+        color: #F9E0BB;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+
+        & h1 {
+            text-align: center;
+        }
+
+        & h3 {
+            width: 20rem;
+            text-align: center;
+        }
+    
+        & div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            & .button-order {
+                padding: 0.5rem 1.5rem;
+                background-color: #FC4F00;
+                color: #F9E0BB;
+                border-radius: 0.7rem;
+                transition-duration: 0.7s;
+            
+                &:hover {
+                    background-color: #F9E0BB;
+                    color: #FC4F00;
+                    font-weight: 700;
+                }
+            }
+            
+            & .button-about {
+                padding: 0.5rem 1.5rem;
+                border-radius: 0.7rem;
+                transition-duration: 0.7s;
+            
+                &:hover {
+                    background-color: #5B0909;
+                    color: #F9E0BB;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+/* MAIN */
+.main {
+    background-color: #F9E0BB;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & .image-body {
+        /* float: left; */
+        border-radius: 5%;
+        width: 15rem;
+        height: 15rem;
+        box-shadow: -3px 3px 1.5rem #5B0909;
+    }
+    
+    & .body-text {
+    
+    
+        /* comment the first 2 breakpoints
+        and test the grid version of this container */
+    
+        /* GRID */
+        width: 40%;
+        height: 90%;
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 1fr 1.5fr;
+        transition-duration: 0.3s;
+        
+        & h1 {
+            align-self: center;
+        }
+
+        & p {
+            text-align: justify;
+        }
+
+        & div {
+            align-self: end;
+        }
+
+
+        /* FLEX */
+        /* width: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    
+        & h5 {
+            padding-bottom: 1.5rem;
+        }
+    
+        & h1 {
+            padding-bottom: 0.5rem;
+        }
+    
+        & div {
+            padding-top: 2rem;
+        } */
+    }
+    
+    & .button-body {
+        padding: 1.3rem;
+        border-radius: 0.3rem;
+        transition-duration: 0.7s;
+        transition-delay: 0.1s;
+    
+        &:hover {
+            background-color: #FC4F00;
+            color: white;
+            font-weight: 700;
+        }
+    }
+}
+
+
+
+/* FOOTER */
+.footer {
+    background-color: #5B0909;
+    display: flex;
+    justify-content: center;
+    color: #F9E0BB;
+}
+
+.footer a{
+    color: black;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+
+    & .info-text-ph {
+        text-align: justify;
+
+        & a {
+            color: #F9E0BB;
+        }
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & h1 {
+        color: #FC4F00;
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 5%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+
+    & i:hover {
+        color: #F9E0BB;
+        transition-duration: 1s;
+    }
+}
+
+
